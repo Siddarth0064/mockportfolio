@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- FONT AWESOME-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+    <link rel="stylesheet" href="index.css">
+    <title>Responsive Personal Portfolio Website Design || @Siddarth MP</title>
+   
+    
+<!--SCROLL REVEAL -->
+<script src="https://unpkg.com/scrollreveal"></script>
+</head>
+<body>
+    <!-- HEADER DESIGN-->
+    <header class="header">
+        <a href="#" class="logo">Portfolio</a>
+        <i class="fa-solid fa-bars" id="menu-icon"></i>
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#about" >About</a>
+            <a href="#services">Services</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header> 
+    
+    <!-- HOME SECTION DESIGN-->
+     <section class="home" id="home">
+        <div class="home-content">
+            <h3>Hi, Myself</h3>
+            <h1>Leo</h1>
+            <h3>And I'm a <span class="multiple-text"></span></h3>
+            <p>Ich arbeite derzeit als Java-Entwickler bei Hulk Hire Technologies und bringe ein Jahr praktische Erfahrung in der Entwicklung robuster und effizienter Softwarelösungen mit. Darüber hinaus habe ich als GoLang Software Trainee bei TekSystems in Bangalore wertvolle Erfahrungen gesammelt. Meine vielfältigen Fähigkeiten und mein Engagement für kontinuierliches Lernen treiben meine Leidenschaft für die Softwareentwicklung voran.</p>
+            <div class="social-media">
+              <a href="#"><i class="fa-brands fa-youtube"></i></a>
+              <a href=""><i class="fa-brands fa-github"></i></a>
+              <a href="" ><i class="fa-brands fa-hackerrank"></i></a>
+              <a href=""><i class="fa-solid fa-envelope"></i></a>
+              <a href=""><i class="fa-brands fa-instagram"></i></a>
+              <a href=""><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+            <a href="" class="btn">Download CV</a>
+        </div>
+        <div class="home-img">
+            <img src="leo_img.webp" alt="">
+        </div>
+     </section>
+     
+
+      <!-- ABOUT SECTION DESIGN-->
+       <section class="about" id="about">
+        <div class="about-img">
+            <img src="leo_service_section_img.jfif" alt="">
+        </div>
+        <div class="about-content">
+            <h2 class="heading">About <span>Me</span></h2>
+            <p> Ich bin ein engagierter Softwareentwickler mit fundiertem Hintergrund in der Elektronik- und Kommunikationstechnik. Mein Weg war geprägt von kontinuierlichem Lernen und beruflicher Weiterentwicklung. Mit praktischer Erfahrung in Java, SQL, HTML und CSS habe ich eine solide Grundlage für die Full-Stack-Entwicklung entwickelt. Meine Erfahrung als GoLang Software Trainee und meine aktuelle Rolle als Java-Entwickler haben meine Fähigkeiten weiter verfeinert und meine Leidenschaft für die Entwicklung effizienter und innovativer Softwarelösungen vertieft.</p>
+            <div class="tab-titles">
+                <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                <p class="tab-links" onclick="opentab('experience')">Experiance</p>
+                <p class="tab-links"onclick="opentab('education')">Education</p>
+            </div>
+            <div class="tab-contents active-tab" id ="skills">
+                <ul>
+                    <li> <h4>Programming Language:</h4>  <span>Java, Sql,  GoLang </span></li>
+                    <li><h4>Architecture: </h4> <span>Microservice</span></li>
+                    <li><h4>Tools:  </h4><span>AWS(EC2, RDS, Secret Manager), Redis, Docker, MobaxTerm, PostMan </span></li>
+                    <li><h4>Frameworks: </h4> <span>SpringBoot, SpringSecurity, Hibernate, JDBC, Agile(Scrum) </span></li>
+                </ul>
+            </div>
+            <div class="tab-contents" id="experience">
+                <ul>
+                    <li><span class="emp">Technologies <span class="roleName">Java Developer Intern</span></span><br> <h5>Derzeit als Java-Entwickler tätig, mit Schwerpunkt auf dem Entwurf und der Implementierung skalierbarer Java-basierter Anwendungen. Zu Ihren Aufgaben gehören die Entwicklung von Backend-Diensten, die Leistungsoptimierung und die Zusammenarbeit mit funktionsübergreifenden Teams zur Bereitstellung robuster Softwarelösungen. <span class="date">[ Apr. 2024 - Aug. 2024 ]</span></h5> </li>
+                    <li><span class="emp">Technologies <span class="roleName">GoLang Developer Trainee</span></span><br> <h5>Absolvierte ein umfassendes Schulungsprogramm in GoLang, sammelte praktische Erfahrungen in der Entwicklung von Go-Anwendungen und verbesserte die Zeitmanagementfähigkeiten. Hat aktiv an Teamprojekten mitgewirkt und die Fähigkeit unter Beweis gestellt, sich an neue Technologien und Methoden anzupassen.<span class="date">[ Oct/2023 - Jan/2024 ]</span></h5></li>
+                </ul>
+            </div>
+            <div class="tab-contents" id="education">
+                <ul>
+                    <li><span class="emp">Bachelore of Engineering</span><br><h5>Elektronik und Kommunikation, Abschluss in2023</h5> <span class="date"> CGPA: 8.0</span></li>
+                </ul>
+            </div>
+          
+        </div>
+        <script>
+            var tablinks=document.getElementsByClassName("tab-links");
+            var tabcontents= document.getElementsByClassName("tab-contents");
+            function opentab(tabname){
+                for(tablink of tablinks){
+                    tablink.classList.remove("active-link");
+                }
+                for(tabcontent of tabcontents){
+                    tabcontent.classList.remove("active-tab");
+                }
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab");
+            }
+        </script>
+       </section>
+
+        <!-- SERVICES SECTION DESIGN-->
+        <section class="services" id="services">
+            <h2 class="heading">My <span>Services</span></h2>
+
+            <div class="services-container">
+                <div class="services-box">
+                    <i class="fa-solid fa-code"></i>
+                    <h3>Backend Development</h3>
+                    <p>Ich habe mich auf die Entwicklung robuster und skalierbarer Backend-Lösungen spezialisiert und bin besonders gut darin, leistungsstarke RestFul-APIs zu erstellen und serverseitige Logik zu verwalten. Meine Expertise sorgt für eine nahtlose Integration und effiziente Datenverarbeitung Ihrer Anwendungen.</p>
+                    <!-- <a href="#" class="btn">Read More</a> -->
+                </div>
+
+                <div class="services-box">
+                    <i class="fa-brands fa-aws"></i>
+                    <h3>Website Hosting</h3>
+                    <p>Als Experte für die Bereitstellung sicherer und schneller Website-Hosting-Lösungen sorge ich für optimale Leistung und Zuverlässigkeit Ihrer Online-Präsenz. Mit einem Fokus auf Verfügbarkeit und Skalierbarkeit stelle ich robuste Hosting-Dienste bereit, die die Zugänglichkeit der Website und das Benutzererlebnis verbessern.</p>
+                    <!-- <a href="#" class="btn">Read More</a> -->
+                </div>
+
+                <div class="services-box">
+                    <i class="fa-solid fa-laptop"></i>
+                    <h3>Basic Project Development</h3>
+                    <p>Ich bin auf die grundlegende Projektentwicklung spezialisiert und biete umfassende Lösungen vom ersten Konzept bis zur Bereitstellung. Mein Ansatz gewährleistet eine effiziente Projektabwicklung mit Schwerpunkt auf der Einhaltung von Terminen und der Bereitstellung funktionaler, benutzerfreundlicher Ergebnisse.</p>
+                    <!-- <a href="#" class="btn">Read More</a> -->
+                </div>
+
+            </div>
+        </section>
+
+
+
+     <!-- PORTFOLIO SECTION DESIGN-->
+      <section class="portfolio" id="portfolio">
+        <h2 class="heading">Latest <span>Projects</span></h2>
+       
+        <div class="portfolio-container">
+            <div class="portfolio-box">
+                <img src="game.jpg" alt="">
+                <div class="portfolio-layer">
+                    <h4>Web Game Design</h4>
+                    <p>Als Experte für die Entwicklung ansprechender und interaktiver webbasierter Spiele bei TechGamerZone schaffe ich immersive Erlebnisse, die Benutzer fesseln und das Gameplay verbessern. Mein Ziel ist es, qualitativ hochwertige Grafiken, eine reibungslose Leistung und eine überzeugende Spielmechanik zu liefern, die meine Spiele auszeichnen.</p>
+                    <a href="" target="_blank">
+                        <i class="fa-solid fa-up-right-from-square"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="portfolio-box">
+                <img src="payment.webp" alt="">
+                <div class="portfolio-layer">
+                    <h4>Backend Payment System</h4>
+                    <p>Ich entwickle robuste Backend-Zahlungssysteme und entwerfe und realisiere sichere und skalierbare Lösungen, die komplexe Transaktionen effizient abwickeln. Meine Arbeit gewährleistet Zuverlässigkeit und nahtlose Integration mit verschiedenen Zahlungsgateways und optimiert so die Finanzabläufe</p>
+                    <i class="fa-solid fa-up-right-from-square"></i>
+                </div>
+            </div>
+<!--
+            <div class="portfolio-box">
+                <img src="payment jpg.png" alt="">
+                <div class="portfolio-layer">
+                    <h4>Web Payment Design</h4>
+                    <p>About Payment WebSite Designing</p>
+                    <i class="fa-solid fa-up-right-from-square"></i>
+                </div>
+            </div>
+            -->
+
+        </div>
+    </section>
+     
+    <!-- CONTACT SECTIONS DESIGN -->
+
+    <section class="contact" id="contact">
+       <h2 class="heading">Contact <span>Me</span></h2>
+       <form name="submit-to-google-sheet" action="#">
+        <div class="input-box">
+            <input type="text" name="Full Name" placeholder="Full Name">
+            <input type="email" name="Email Address"  placeholder="Email Address">
+        </div>
+        <div class="input-box">
+            <input type="number" name="Mobile Number" placeholder="Mobile Number">
+            <input type="text" name="Email Subject" placeholder="Email Subject">
+        </div>
+        <textarea cols="30" rows="10" name="Message" placeholder="Your Message"></textarea>
+        <input type="submit" value="Send Message" class="btn">
+       </form>
+       <span id="msg"></span>
+    </section>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzLQG7iMTgdXxo8ydXq60MYZcholV87aJujFBAKd7FluR8VgNRHYjFSIc9GDky9mpqdPg/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg");
+        
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML="Message Sent Successfully";
+                msg.classList.add("visible");
+                form.classList.add("hidden");
+                setTimeout(() => {
+                msg.classList.remove("visible");
+                form.classList.remove("hidden");
+                form.reset();
+            }, 1500); // Adjust the delay as needed
+        })
+        .catch(error => console.error('Error!', error.message));
+});
+      </script>
+
+    <!--Footer DESIGN-->
+    <footer class="footer">
+        <div class="footer-text">
+           <p>Copyright &copy; 2024 von @Leo ||  Alle Rechte vorbehalten</p>  
+        </div>
+        <div class="footer-iconTop">
+            <a href="#home"><i class="fa-solid fa-angle-up"></i></a>
+        </div>
+    </footer>
+
+
+<!--TYPED. JS-->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <!--MAIN JAVA SRIPTS-->
+    <script src="main.js"></script>
+    <script src="typed.js"></script>
+    <script>
+
+    document.addEventListener('DOMContentLoaded', () => {
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('.navbar a');
+
+    window.addEventListener('scroll', () => {
+        let current = '';
+
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            if (pageYOffset >= sectionTop - 60) {
+                current = section.getAttribute('id');
+            }
+        });
+
+        navLinks.forEach(a => {
+            a.classList.remove('active');
+            if (a.getAttribute('href').includes(current)) {
+                a.classList.add('active');
+            }
+        });
+    });
+});
+
+    </script>
+
+   
+</body>
+</html>
